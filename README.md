@@ -8,7 +8,7 @@ docker build -t ip-rotor .
 
 Run:
 ```
-docker run -p 9050:9050 --name myrotor ip-rotor
+docker run -d -p 9050:9050 --name myrotor ip-rotor
 ```
 
 When done with it, stop it with:
@@ -23,5 +23,5 @@ docker start myrotor
 
 Simply use it as a socks proxy. For example:
 ```
-for i in {1..10}; do curl --socks5-hostname localhost:9050 http://icanhazip.com; sleep2; done
+for i in {1..10}; do curl --socks5-hostname localhost:9050 http://icanhazip.com; sleep 2; done
 ```
