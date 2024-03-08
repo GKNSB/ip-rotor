@@ -7,4 +7,4 @@ RUN sed -i 's/#SocksPolicy reject */SocksPolicy accept /g' /etc/tor/torrc
 
 EXPOSE 9050/tcp 9050/udp
 
-CMD ["/bin/bash", "-c", "screen -S tor -dm tor; while true; do pkill -HUP tor; sleep 2; done"]
+CMD ["/bin/bash", "-c", "screen -S tor -dm tor; while true; do pkill -HUP tor; sleep 1; done"]
